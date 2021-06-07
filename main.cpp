@@ -156,6 +156,14 @@ int main()
                 sha1(p2,3);
                 sha1(p3,4);
             }
+        case 2:
+            cout << "MD5 selecionado." << endl;
+            cout << "Ahora, el siguiente caso de prueba ejemplificara la comunicacion a traves de correo electronico." << endl;
+            cout << "Una persona desea comprobar si sus correos estan sufiendo perdida o alteracion de informacion." << endl;
+            cout << "Por lo que plantea utilizar como emisor un su celura, y como lado receptor su computadora en la\n que pretende recibir el contenido del mismo encriptado utilizando MD5" << endl;
+            cout << "(Sistema) Redacte el contenido del correo electronico:" << endl;
+            string msg;
+            cin >> msg;
 
         }
 
