@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <md5.h>
+
 using namespace std;
 vector<int> Xqd;//8*64=512
 int bits[80];//32 bits
@@ -160,11 +162,15 @@ int main()
             cout << "MD5 selecionado." << endl;
             cout << "Ahora, el siguiente caso de prueba ejemplificara la comunicacion a traves de correo electronico." << endl;
             cout << "Una persona desea comprobar si sus correos estan sufiendo perdida o alteracion de informacion." << endl;
-            cout << "Por lo que plantea utilizar como emisor un su celura, y como lado receptor su computadora en la\n que pretende recibir el contenido del mismo encriptado utilizando MD5" << endl;
-            cout << "(Sistema) Redacte el contenido del correo electronico:" << endl;
+            cout << "Por lo que plantea utilizar como emisor su celurar, y como lado receptor su computadora en la\n que pretende recibir el contenido del mismo encriptado utilizando MD5" << endl;
+            cout << "(Sistema) Redacte el contenido del correo electronico:              (SIN ESPACIOS)" << endl;
             string msg;
             cin >> msg;
 
+            cout << "El usuario sabe que su mensaje fue: " << msg << ". Por lo que, introduce este mismo mensaje en \nuna calculadora de MD5, la calculadora le retorna: " << md5(msg) << endl;
+
+            cout << "Inmediantamente, del lado receptor, pudo comprobar que su mensaje no ha sido alterado, ya que\n al codificar el mensaje recibido con MD5, la computadora muestra: " << md5(msg) << endl;
+            break;
         }
 
     } while (opcion != 3);
